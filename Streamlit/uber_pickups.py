@@ -15,7 +15,6 @@ st.write("Uber pickups test")
 source = "https://s3-us-west-2.amazonaws.com/streamlit-demo-data/uber-raw-data-sep14.csv.gz"
 
 
-#df = pd.read_csv(r"C:\Users\Victor Borrayo\Desktop\Galileo\CuartoTrimestre\ProductDevelopment\Clase-3-11-2021\uber-raw-data-sep14.csv").rename()
 
 @st.cache
 def download_data():
@@ -25,7 +24,7 @@ def download_data():
 
 
 df = download_data()
-#total_pages = 1000
+
 page_size = 1000
 total_pages= math.ceil(len(df)/page_size)
 starting_value = 0
@@ -77,23 +76,5 @@ tdf4['pickups'] = tdf4['Date/Time']
 
 st.bar_chart(tdf4['pickups'])
 
-
-#tdf2
-
-
-
-
-
-#df = df[df['']]
-#string = df.dtypes
-
-#st.write(string)
-
-#df["hour"] = 1
-#df[0:100] #df["Date/Time"].hour
-
-#df[0:100]
-#info = df.info()
-#st.write(info)
 
 
