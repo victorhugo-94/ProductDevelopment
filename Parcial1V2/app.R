@@ -323,6 +323,7 @@ server <- function(input, output, session) {
   )
    #----Carga de datos----
    observeEvent(input$button1,{
+      drv <- dbDriver("MySQL")
       con <- dbConnect(drv,
                        dbname = 'streamlit',
                        host = '34.125.174.19',
